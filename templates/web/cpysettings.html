@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings Page</title>
+    <link rel="stylesheet" href="set.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="logo" onclick="redirectToHome()">Your Logo</div> <!-- Updated to handle click for homepage redirect -->
+        <div class="profile-dropdown">
+            <img src="profile-pic.jpg" alt="Profile" class="profile-pic">
+            <div class="dropdown-content">
+                <a href="set.html">Settings</a>
+                <a href="logout.html">Logout</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="settings-container">
+        <h1>Settings</h1>
+        <div class="settings-option">
+            <label for="login-user">Login with another user</label>
+            <button id="login-user" onclick="loginUser()">Login</button>
+        </div>
+        <div class="settings-option">
+            <label for="logout">Logout</label>
+            <button id="logout" onclick="logout()">Logout</button>
+        </div>
+        <hr>
+        <div class="settings-option">
+            <label for="theme">Select Theme</label>
+            <select id="theme" onchange="changeTheme()">
+                <option value="light">Light</option>
+                <option value="dark">Dark</option>
+            </select>
+        </div>
+        <div class="settings-option">
+            <label for="language">Language</label>
+            <select id="language">
+                <option value="en">English</option>
+                <option value="es">Spanish</option>
+                <option value="fr">French</option>
+                <!-- Add more languages as needed -->
+            </select>
+        </div>
+        <div class="settings-option">
+            <label for="profile-pic-input">Change Profile Pic</label>
+            <input type="file" id="profile-pic-input" accept="image/*" style="display: none;" onchange="previewImage(event)">
+            <button id="cng-profile" onclick="document.getElementById('profile-pic-input').click()">Change Profile</button>
+        </div>
+
+        <div class="preview-container">
+            <img id="profile-pic-preview" src="" alt="Profile Preview" style="display: none;">
+        </div>
+    </div>
+
+    <footer>
+        <div class="branding">
+            <a href="https://linkedin.com"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            <a href="https://twitter.com"><i class="fab fa-twitter"></i> Twitter</a>
+            <a href="https://discord.com"><i class="fab fa-discord"></i> Discord</a>
+            <a href="https://reddit.com"><i class="fab fa-reddit"></i> Reddit</a>
+            <a href="https://twitch.tv"><i class="fab fa-twitch"></i> Twitch</a>
+        </div>
+    </footer>
+
+    <script>
+        // Redirect to the homepage when the logo is clicked
+        function redirectToHome() {
+            window.location.href = 'index.html'; // Replace 'index.html' with your homepage URL
+        }
+
+        // Handle login with another user
+        function loginUser() {
+            alert('Redirecting to login page...');
+            window.location.href = '/login'; // Example redirect
+        }
+
+        // Handle logout
+        function logout() {
+            alert('Logging out...');
+            window.location.href = '/logout'; // Example redirect
+        }
+
+        // Change the theme of the page
+        function changeTheme() {
+            const theme = document.getElementById('theme').value;
+            if (theme === 'dark') {
+                document.body.style.backgroundColor = '#333';
+                document.body.style.color = '#fff';
+            } else {
+                document.body.style.backgroundColor = '#f4f4f4';
+                document.body.style.color = '#000';
+            }
+        }
+
+        // Preview the selected profile image
+        function previewImage(event) {
+            const input = event.target;
+            const preview = document.getElementById('profile-pic-preview');
+
+            if (input.files && input.files[0]) {
+                const reader = new FileReader();
+
+                reader.onload = function(e) {
+                    preview.src = e.target.result;
+                    preview.style.display = 'block';
+                };
+
+                reader.readAsDataURL(input.files[0]);
+            } else {
+                preview.style.display = 'none';
+            }
+        }
+
+        // Example function to handle profile picture upload (requires backend support)
+        function uploadProfilePic() {
+            const input = document.getElementById('profile-pic-input');
+            if (input.files.length > 0) {
+                const formData = new FormData();
+                formData.append('profile-pic', input.files[0]);
+
+                fetch('/upload-profile-pic', {
+                    method: 'POST',
+                    body: formData
+                }).then(response => response.json())
+                  .then(data => {
+                      alert('Profile picture uploaded successfully!');
+                  })
+                  .catch(error => {
+                      alert('An error occurred while uploading the profile picture.');
+                  });
+            } else {
+                alert('Please select a profile picture to upload.');
+            }
+        }
+    </script>
+</body>
+</html>

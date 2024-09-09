@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Intern Macha</title>
+    <!-- Linking CSS and Favicon files -->
+    <link rel="stylesheet" href="{{ url_for('static', path='css/student_signup.css') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', path='img/favicon-16x16.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', path='img/favicon-32x32.png') }}">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', path='img/favicon.ico') }}">
+    <link rel="icon" type="image/png" sizes="192x192" href="{{ url_for('static', path='img/android-chrome-192x192.png') }}">
+    <link rel="icon" type="image/png" sizes="512x512" href="{{ url_for('static', path='img/android-chrome-512x512.png') }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', path='img/apple-touch-icon.png') }}">
+    <link rel="manifest" href="{{ url_for('static', path='site.webmanifest') }}">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">Internmacha</div>
+            <nav>
+                <ul>
+                    <li><a href="{{ url_for('read_root') }}">Home</a></li>
+                    <li><a href="#Internships">Internship</a></li>
+                    <li><a href="#companies-list">Companies</a></li>
+                    <li><a href="#services">Services</a></li>
+                </ul>
+            </nav>
+            <div class="auth-buttons">
+                <a href="{{ url_for('get_login') }}" class="login-btn">Login</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section id="register">
+            <div class="container">
+                <h2>Register</h2>
+                <form action="{{ url_for('post_student_signup') }}" method="post" enctype="multipart/form-data">
+                    <fieldset>
+                        <legend>Personal Information</legend>
+                        <div class="form-group">
+                            <label for="first-name">First Name:</label>
+                            <input type="text" id="first-name" name="first_name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="last-name">Last Name:</label>
+                            <input type="text" id="last-name" name="last_name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="college-name">College Name:</label>
+                            <input type="text" id="college-name" name="college_name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="semester">Semester:</label>
+                            <input type="number" id="semester" name="semester" min="1" max="8" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="passing-year">Passing Year:</label>
+                            <input type="number" id="passing-year" name="passing_year" min="2024" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="cgpa">CGPA:</label>
+                            <input type="number" id="cgpa" name="cgpa" step="0.01" min="0" max="10" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="branch">Branch:</label>
+                            <input type="text" id="branch" name="branch" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-number">Contact Number:</label>
+                            <input type="tel" id="contact-number" name="contact_number" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Account Details</legend>
+                        <div class="form-group">
+                            <label for="password">Password:</label>
+                            <input type="password" id="password" name="password" required>
+                            <small>Password must be at least 8 characters long, contain one uppercase letter, one lowercase letter, and one number.</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="confirm-password">Confirm Password:</label>
+                            <input type="password" id="confirm-password" name="confirm_password" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="state">State:</label>
+                            <input type="text" id="state" name="state" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="nation">Nation:</label>
+                            <input type="text" id="nation" name="nation" required>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Profile Photo</legend>
+                        <div class="form-group">
+                            <label for="profile-photo">Upload Profile Photo:</label>
+                            <input type="file" id="profile-photo" name="profile_photo" accept="image/*" required>
+                        </div>
+                    </fieldset>
+                    <button type="submit" class="submit-btn">Register</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Intern Macha. All rights reserved.</p>
+            <div class="social-icons">
+                <a href="#"><img src="{{ url_for('static', path='img/discord.png') }}" alt="Discord"></a>
+                <a href="#"><img src="{{ url_for('static', path='img/twitter.png') }}" alt="Twitter"></a>
+                <a href="#"><img src="{{ url_for('static', path='img/instagram.png') }}" alt="Instagram"></a>
+                <a href="#"><img src="{{ url_for('static', path='img/linkedin.png') }}" alt="LinkedIn"></a>
+                <a href="#"><img src="{{ url_for('static', path='img/facebook.png') }}" alt="Facebook"></a>
+            </div>
+        </div>
+    </footer>
+    <script type="text/javascript">
+        function toggleDropdown() {
+            var dropdownContent = document.querySelector('.dropdown-content');
+            if (dropdownContent.style.display === 'none' || dropdownContent.style.display === '') {
+                dropdownContent.style.display = 'block';
+            } else {
+                dropdownContent.style.display = 'none';
+            }
+        }
+        document.addEventListener('click', function(event) {
+            var dropdownContent = document.querySelector('.dropdown-content');
+            if (!event.target.closest('.dropdown')) {
+                dropdownContent.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

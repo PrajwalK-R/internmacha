@@ -1,0 +1,138 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #9d9d9d81;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #525151;
+    border-bottom: 1px solid #17171771;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+}
+
+.header-right {
+    position: relative;
+}
+
+.header-right button {
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #eee;
+    cursor: pointer;
+    position: relative;
+}
+
+.header-right button:hover {
+    background-color: #c1e89a;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%; /* Position it directly below the button */
+    left: 0;
+    background-color: #abafaf52;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    z-index: 1000;
+    max-height: 300px; /* Adjust height as needed */
+    overflow-y: auto; /* Enable scrolling if content exceeds max-height */
+    width: 100%; /* Match the width of the button */
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+
+.dropdown a {
+    display: block;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    color: #000000;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+}
+
+.dropdown a:hover {
+    background-color: #eee;
+}
+
+.dropdown.show {
+    display: block;
+}
+
+main {
+    display: flex;
+    padding: 1rem;
+    flex-wrap: wrap;
+    gap: 1rem; /* Space between sections */
+}
+
+section {
+    background-color: #686868;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    overflow-y: auto; /* Enable scrolling if content exceeds height */
+}
+
+.filters {
+    max-width: 200px;
+    height: 500px; /* Fixed height for scrolling */
+    overflow-y: auto;
+}
+
+.news {
+    flex: 2;
+    height: 500px; /* Fixed height for scrolling */
+    overflow-y: auto;
+}
+
+.internship {
+    flex: 3;
+    height: 500px; /* Fixed height for scrolling */
+    overflow-y: auto;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.checkbox-container label {
+    margin-left: 0.5rem;
+}
+
+.news-item,
+.internship-item {
+    background-color: #7b6d6d;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+}
+
+.internship-item button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.internship-item button:hover {
+    background-color: #0056b3;
+}       
+        
+        
+        
+        

@@ -1,0 +1,189 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+header {
+    background: #fff;
+    padding: 1em 0;
+    border-bottom: 1px solid #ddd;
+}
+
+header .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    display: inline-block;
+}
+
+header nav {
+    display: inline-block;
+    float: right;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin-left: 1em;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.2em;
+}
+
+.auth-buttons {
+    display: inline-block;
+    float: right;
+    margin-left: 2em;
+}
+
+.auth-buttons a {
+    text-decoration: none;
+    padding: 0.5em 1em;
+    border-radius: 4px;
+    font-size: 1em;
+    margin-left: 0.5em;
+}
+
+.auth-buttons .login-btn {
+    background: #fff;
+    border: 1px solid #0073e6;
+    color: #0073e6;
+}
+
+.auth-buttons .register-btn {
+    background: #fff;
+    border: 1px solid #0073e6;
+    color: #0073e6;
+    margin-left: 5px;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+main {
+    padding: 2em 0;
+}
+
+#register {
+    background: #fff;
+    padding: 2em 0;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+
+#register h2 {
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+form {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+fieldset {
+    border: none;
+    margin-bottom: 1.5em;
+    padding: 0;
+    border-radius: 8px;
+    background: #f9f9f9;
+    padding: 1.5em;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+legend {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 1em;
+}
+
+.form-group {
+    margin-bottom: 1em;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5em;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.5em;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.submit-btn {
+    background: #0073e6;
+    color: #fff;
+    padding: 0.75em 1.5em;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background 0.3s;
+}
+
+.submit-btn:hover {
+    background: #005bb5;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    padding: 1em 0;
+    text-align: center;
+}
+
+footer p {
+    margin: 0.5em 0;
+}
+
+footer .social-icons img {
+    width: 30px;
+    height: 30px;
+    margin: 0 0.5em;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}

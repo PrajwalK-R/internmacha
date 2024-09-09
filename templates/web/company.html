@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Cards Layout</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="logo">Your Logo</div>
+        <div class="profile-dropdown">
+            <img src="profile-pic.jpg" alt="Profile" class="profile-pic">
+            <div class="dropdown-content">
+                <a href="set.html">Settings</a>
+                <a href="logout.html">Logout</a>
+            </div>
+        </div>
+    </header>
+
+
+    <aside class="filter-container">
+        <div class="filter-card">
+            <h1>Filters</h1>
+
+            <!-- Front-end Section -->
+            <section class="filter-section">
+                <h3>Front-end</h3>
+                <div>
+                    <label for="filter1">HTML</label>
+                    <input type="checkbox" id="filter1">
+                </div>
+
+                <div>
+                    <label for="filter1">CSS</label>
+                    <input type="checkbox" id="filter1">
+                </div>
+
+                <div>
+                    <label for="filter1">React</label>
+                    <input type="checkbox" id="filter1">
+                </div>
+
+                <div>
+                    <label for="filter1">JavaScript</label>
+                    <input type="checkbox" id="filter1">
+                </div>
+            </section>
+
+            <!-- Back-end Section -->
+            <section class="filter-section">
+                <h3>Back-end</h3>
+                <div>
+                    <label for="filter2">Python</label>
+                    <input type="checkbox" id="filter2">
+                </div>
+
+                <div>
+                    <label for="filter2">Java</label>
+                    <input type="checkbox" id="filter2">
+                </div>
+
+                <div>
+                    <label for="filter2">Node JS</label>
+                    <input type="checkbox" id="filter2">
+                </div>
+
+                <div>
+                    <label for="filter2">Leaf</label>
+                    <input type="checkbox" id="filter2">
+                </div>
+            </section>
+
+            <!-- Database Section -->
+            <section class="filter-section">
+                <h3>Database</h3>
+                <div>
+                    <label for="filter3">MySQL</label>
+                    <input type="checkbox" id="filter3">
+                </div>
+
+                <div>
+                    <label for="filter3">MongoDB</label>
+                    <input type="checkbox" id="filter3">
+                </div>
+
+                <div>
+                    <label for="filter3">Django</label>
+                    <input type="checkbox" id="filter3">
+                </div>
+
+                <div>
+                    <label for="filter3">PostgreSQL</label>
+                    <input type="checkbox" id="filter3">
+                </div>
+            </section>
+
+            <!-- Data Science Section -->
+            <section class="filter-section">
+                <h3>Data Science</h3>
+                <div>
+                    <label for="filter4">Big Data</label>
+                    <input type="checkbox" id="filter4">
+                </div>
+
+                <div>
+                    <label for="filter4">Machine Learning</label>
+                    <input type="checkbox" id="filter4">
+                </div>
+
+                <div>
+                    <label for="filter4">PyTorch</label>
+                    <input type="checkbox" id="filter4">
+                </div>
+
+                <div>
+                    <label for="filter4">Deep Learning</label>
+                    <input type="checkbox" id="filter4">
+                </div>
+
+                <div>
+                    <label for="filter4">Gen AI</label>
+                    <input type="checkbox" id="filter4">
+                </div>
+            </section>
+
+            <!-- Cyber-Security Section -->
+            <section class="filter-section">
+                <h3>Cyber-Security</h3>
+                <div>
+                    <label for="filter5">VDPT</label>
+                    <input type="checkbox" id="filter5">
+                </div>
+
+                <div>
+                    <label for="filter5">OSINT</label>
+                    <input type="checkbox" id="filter5">
+                </div>
+
+                <div>
+                    <label for="filter5">Network Security</label>
+                    <input type="checkbox" id="filter5">
+                </div>
+
+                <div>
+                    <label for="filter5">CISSP</label>
+                    <input type="checkbox" id="filter5">
+                </div>
+
+                <div>
+                    <label for="filter5">CEH</label>
+                    <input type="checkbox" id="filter5">
+                </div>
+
+                <div>
+                    <label for="filter5">CompTIA+</label>
+                    <input type="checkbox" id="filter5">
+                </div>
+            </section>
+
+            <div class="apply-filter">
+                <button id="apply-filter" onclick="apply-filter()">Apply</button>
+            </div>
+        </div>
+    </aside>
+
+
+
+    <div class="main-content">
+        <div class="cards-container">
+            <div class="card" onclick="window.location.href='profile1.html'">
+                <img src="profile1.jpg" alt="Profile 1" class="profile-pic-small">
+                <div class="card-content">
+                    <h2>Profile Name 1</h2>
+                    <p>Short description about Profile 1...</p>
+                </div>
+            </div>
+
+            <div class="card" onclick="window.location.href='profile2.html'">
+                <img src="profile2.jpg" alt="Profile 2" class="profile-pic-small">
+                <div class="card-content">
+                    <h2>Profile Name 2</h2>
+                    <p>Short description about Profile 2...</p>
+                </div>
+            </div>
+
+            <!-- Add more cards as needed -->
+            <div class="cards-container">
+                <div class="card zigzag-left" onclick="window.location.href='profile1.html'">
+                    <img src="profile1.jpg" alt="Profile 1" class="profile-pic-small">
+                    <div class="card-content">
+                        <h2>Profile Name 1</h2>
+                        <p>Short description about Profile 1...</p>
+                    </div>
+                </div>
+
+                <div class="card zigzag-right" onclick="window.location.href='profile2.html'">
+                    <img src="profile2.jpg" alt="Profile 2" class="profile-pic-small">
+                    <div class="card-content">
+                        <h2>Profile Name 2</h2>
+                        <p>Short description about Profile 2...</p>
+                    </div>
+                </div>
+
+                <div class="card zigzag-left" onclick="window.location.href='profile3.html'">
+                    <img src="profile3.jpg" alt="Profile 3" class="profile-pic-small">
+                    <div class="card-content">
+                        <h2>Profile Name 3</h2>
+                        <p>Short description about Profile 3...</p>
+                    </div>
+                </div>
+
+                <div class="card zigzag-right" onclick="window.location.href='profile4.html'">
+                    <img src="profile4.jpg" alt="Profile 4" class="profile-pic-small">
+                    <div class="card-content">
+                        <h2>Profile Name 4</h2>
+                        <p>Short description about Profile 4...</p>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <footer>
+                <div class="branding">
+                    <a href="https://linkedin.com"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                    <a href="https://twitter.com"><i class="fab fa-twitter"></i> Twitter</a>
+                    <a href="https://discord.com"><i class="fab fa-discord"></i> Discord</a>
+                    <a href="https://reddit.com"><i class="fab fa-reddit"></i> Reddit</a>
+                    <a href="https://twitch.tv"><i class="fab fa-twitch"></i> Twitch</a>
+                </div>
+            </footer>
+
+            <script>
+                // script.js
+
+                document.addEventListener("DOMContentLoaded", function () {
+                    const profilePic = document.querySelector('.profile-pic');
+                    const dropdown = document.querySelector('.dropdown-content');
+
+                    profilePic.addEventListener('click', function () {
+                        dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+                    });
+
+                    window.addEventListener('click', function (event) {
+                        if (!profilePic.contains(event.target)) {
+                            dropdown.style.display = 'none';
+                        }
+                    });
+                });
+
+            </script>
+</body>
+
+</html>

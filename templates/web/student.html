@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internship Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='/css/student.css') }}">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Logo">
+        </div>
+        <div class="header-right">
+            <button id="notification-btn">Notification</button>
+            <div id="notification-dropdown" class="dropdown">
+                <a href="#">New Internship Invitations</a>
+                <!-- Add more links as needed -->
+            </div>
+
+            <button id="status-btn">Status</button>
+            <div id="status-dropdown" class="dropdown">
+                <a href="#">Applied List</a>
+                <a href="#">Accepted</a>
+                <a href="#">Completed</a>
+            </div>
+
+            <button id="profile-btn">Profile</button>
+            <div id="profile-dropdown" class="dropdown">
+                <a href="{{ url_for('get_stdprofile') }}">My Profile</a>
+                <a href="{{ url_for('get_stdsettings') }}">Settings</a>
+                <a href="#">Logout</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="filters">
+            <h2>Filters</h2>
+            <h3>Course</h3>
+            <div class="checkbox-container">
+                <input type="checkbox" id="data-science" name="course">
+                <label for="data-science">Data Science</label>
+            </div>
+            <div class="checkbox-container">
+                <input type="checkbox" id="aiml" name="course">
+                <label for="aiml">AIML</label>
+            </div>
+            <div class="checkbox-container">
+                <input type="checkbox" id="cyber-security" name="course">
+                <label for="cyber-security">Cyber Security</label>
+            </div>
+            <div class="checkbox-container">
+                <input type="checkbox" id="blockchain" name="course">
+                <label for="blockchain">Blockchain</label>
+            </div>
+            <div class="checkbox-container">
+                <input type="checkbox" id="iot" name="course">
+                <label for="iot">IOT</label>
+            </div>
+            <div class="checkbox-container">
+                <input type="checkbox" id="devops" name="course">
+                <label for="devops">Devops</label>
+            </div>
+            <h3>Duration</h3>
+            <div class="checkbox-container">
+                <input type="checkbox" id="1-to-3-months" name="durations">
+                <label for="1-to-3-months">1 to 3 months</label>
+            </div>
+            <div class="checkbox-container">
+                <input type="checkbox" id="4-to-6-months" name="durations">
+                <label for="4-to-6-months">4 to 6 months</label>
+            </div>
+            <div class="checkbox-container">
+                <input type="checkbox" id="6-to-12-months" name="durations">
+                <label for="6-to-12-months">6 to 12 months</label>
+            </div>
+
+            <h3>Internship Type</h3>
+            <div class="checkbox-container">
+                <input type="checkbox" id="paid-internship" name="internship-type">
+                <label for="paid-internship">Paid Internship</label>
+            </div>
+            <div class="checkbox-container">
+                <input type="checkbox" id="student-internship" name="internship-type">
+                <label for="student-internship">Student Internship</label>
+            </div>
+        </section>
+        <section class="news">
+            <h2>News on current internship opportunities</h2>
+            <div class="news-item" id="google">
+                <h3>From Google</h3>
+            </div>
+            <div class="news-item" id="ibm">
+                <h3>From IBM</h3>
+            </div>
+            <div class="news-item" id="infosys">
+                <h3>From Infosys</h3>
+            </div>
+            <div class="news-item" id="google">
+                <h3>From Google</h3>
+            </div>
+            <div class="news-item" id="google">
+                <h3>From Google</h3>
+            </div>
+            
+        </section>
+        <section class="internship">
+            <h2>Internship</h2>
+            <div class="internship-item" id="company-1">
+                <h3>Company-1</h3>
+                <button>Apply</button>
+            </div>
+            <div class="internship-item" id="company-2">
+                <h3>Company-2</h3>
+                <button>Apply</button>
+            </div>
+            <div class="internship-item" id="company-3">
+                <h3>Company-3</h3>
+                <button>Apply</button>
+            </div>
+            <div class="internship-item" id="company-4">
+                <h3>Company-4</h3>
+                <button>Apply</button>
+            </div>
+            <div class="internship-item" id="company-5">
+                <h3>Company-5</h3>
+                <button>Apply</button>
+            </div>
+        </section>
+    </main>
+    <script src = "{{ url_for('static', path='/jss/student.js') }}"></script>
+    
+    
+    
+
+</body>
+</html>

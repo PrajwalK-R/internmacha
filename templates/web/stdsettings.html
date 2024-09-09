@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Settings</title>
+<link rel="stylesheet" href="{{ url_for('static', path='/css/stdsettings.css') }}">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Logo">
+        </div>
+        <div class="header-right">
+            <button id="notification-btn">Notification</button>
+            <div id="notification-dropdown" class="dropdown">
+                <a href="#">New Internship Invitations</a>
+                <!-- Add more links as needed -->
+            </div>
+
+            <button id="status-btn">Status</button>
+            <div id="status-dropdown" class="dropdown">
+                <a href="#">Applied List</a>
+                <a href="#">Accepted</a>
+                <a href="#">Completed</a>
+            </div>
+
+            <button id="profile-btn">Profile</button>
+            <div id="profile-dropdown" class="dropdown">
+                <a href="{{ url_for('get_stdprofile') }}">My Profile</a>
+                <a href="{{ url_for('get_stdsettings') }}">Settings</a>
+                <a href="#">Logout</a>
+            </div>
+        </div>
+    </header>
+
+<div class="container">
+  <div class="settings">
+    <h1>Settings</h1>
+  </div>
+
+  <div class="option">
+    <label class="label">Theam</label>
+    <label class="switch">
+      <input type="checkbox" id="darkModeToggle">
+      <span class="slider"></span>
+    </label>
+  </div>
+
+  <div class="option">
+    <label class="label">Switch to different user</label>
+    <button class="button" onclick="switchUser()">Switch User</button>
+  </div>
+
+  <div class="option">
+    <label class="label">Log out from current user</label>
+    <button class="button" onclick="logout()">Logout</button>
+  </div>
+</div>
+
+<script src="{{ url_for('static', path='/jss/stdsettings.js') }}"></script>
+
+</body>
+</html>

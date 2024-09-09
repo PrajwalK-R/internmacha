@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intern Macha</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='/css/index.css') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="/static/img/favicon-16x16.png">
+     <link rel="icon" type="image/png" sizes="32x32" href="/static/img/favicon-32x32.png">
+     <link rel="icon" type="image/x-icon" href="/static/img/favicon.ico">
+     <!-- Android Chrome -->
+<link rel="icon" type="image/png" sizes="192x192" href="/static/img/android-chrome-192x192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="/static/img/android-chrome-512x512.png">
+<!-- Apple Touch Icon -->
+<link rel="apple-touch-icon" sizes="180x180" href="/static/img/apple-touch-icon.png">
+<!-- Web Manifest -->
+<link rel="manifest" href="/static/site.webmanifest">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">Internmacha</div>
+            <nav>
+                <ul>
+                    <li><a href="#Internships">Internship</a></li>
+                    <li><a href="#companies-list">Companies</a></li>
+                    <li><a href="#services">Services</a></li>
+                </ul>
+            </nav>
+            <div class="auth-buttons">
+                <a href="{{ url_for('get_login') }}" class="login-btn">Login</a>
+
+                <div class="dropdown">
+                    <button class="register-btn" onclick="toggleDropdown()">Register</button>
+                    <div class="dropdown-content" style="display:none;">
+                        <a href="{{url_for('get_student_signup') }}">Register as Student</a>
+                        <a href="{{url_for('get_company_signup')}}">Register as Company</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section id="featured-companies">
+            <div class="container">
+                <h2>Featured companies actively hiring</h2>
+                <div class="filters">
+                    <button class="filter-btn active">All</button>
+                    <button class="filter-btn">IT Services</button>
+                    <button class="filter-btn">BFSI</button>
+                </div>
+                <div class="companies-list">
+                    <div class="company-card">
+                        <img src="{{ url_for('static', path='/img/wipro.jpg') }}" alt="Wipro">
+                        <h3>Wipro</h3>
+                        <p>Leading provider of IT services and consulting.</p>
+                        <a href="#" class="view-jobs">View jobs</a>
+                    </div>
+                    <div class="company-card">
+                        <img src="{{ url_for('static', path='/img/wipro.jpg') }}" alt="Infosys">
+                        <h3>Infosys</h3>
+                        <p>Global leader in next-generation digital services and consulting.</p>
+                        <a href="#" class="view-jobs">View jobs</a>
+                    </div>
+                    <div class="company-card">
+                        <img src="{{ url_for('static', path='/img/wipro.jpg') }}" alt="TCS">
+                        <h3>TCS</h3>
+                        <p>Global IT services, consulting, and business solutions organization.</p>
+                        <a href="#" class="view-jobs">View jobs</a>
+                    </div>
+                    <div class="company-card">
+                        <img src="{{ url_for('static', path='/img/wipro.jpg') }}" alt="Accenture">
+                        <h3>Accenture</h3>
+                        <p>Leading global professional services company, providing strategy, consulting, and operations services.</p>
+                        <a href="#" class="view-jobs">View jobs</a>
+                    </div>
+                    <div class="company-card">
+                        <img src="{{ url_for('static', path='/img/wipro.jpg') }}" alt="Amazon">
+                        <h3>Amazon</h3>
+                        <p>E-commerce leader and innovator in cloud computing, artificial intelligence, and more.</p>
+                        <a href="#" class="view-jobs">View jobs</a>
+                    </div>
+                    <div class="company-card">
+                        <img src="{{ url_for('static', path='/img/wipro.jpg') }}" alt="Meta">
+                        <h3>Meta</h3>
+                        <p>Innovator in social networking, virtual reality, and more.</p>
+                        <a href="#" class="view-jobs">View jobs</a>
+                    </div>
+                    <div class="company-card">
+                        <img src="{{ url_for('static', path='/img/wipro.jpg') }}" alt="Netflix">
+                        <h3>Netflix</h3>
+                        <p>Leading online streaming service provider, producing original content and more.</p>
+                        <a href="#" class="view-jobs">View jobs</a>
+                    </div>
+                </div>
+                <div class="view-all">
+                    <a href="#">View all companies</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Intern Macha. All rights reserved.</p>
+            <div class="social-icons">
+                <a href="#"><img src="{{ url_for('static', path='/img/wipro.jpg') }}" alt="Discord"></a>
+                <a href="#"><img src="{{ url_for('static', path='/img/wipro.jpg') }}" alt="Twitter"></a>
+                <a href="#"><img src="{{ url_for('static', path='/img/wipro.jpg') }}" alt="Instagram"></a>
+                <a href="#"><img src="{{ url_for('static', path='/img/wipro.jpg') }}" alt="LinkedIn"></a>
+                <a href="#"><img src="{{ url_for('static', path='/img/wipro.jpg') }}" alt="Facebook"></a>
+            </div>
+        </div>
+    </footer>
+    <script type="text/javascript">
+        function toggleDropdown() {
+            var dropdownContent = document.querySelector('.dropdown-content');
+            if (dropdownContent.style.display === 'none' || dropdownContent.style.display === '') {
+                dropdownContent.style.display = 'block';
+            } else {
+                dropdownContent.style.display = 'none';
+            }
+        }
+        document.addEventListener('click', function(event) {
+            var dropdownContent = document.querySelector('.dropdown-content');
+            if (!event.target.closest('.dropdown')) {
+                dropdownContent.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

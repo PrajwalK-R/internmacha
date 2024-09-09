@@ -1,0 +1,216 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+header {
+    background: #fff;
+    padding: 1em 0;
+    border-bottom: 1px solid #ddd;
+}
+
+header .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    display: inline-block;
+}
+
+header nav {
+    display: inline-block;
+    float: right;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin-left: 1em;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.2em;
+}
+
+.auth-buttons {
+    display: inline-block;
+    float: right;
+    margin-left: 2em;
+
+}
+
+
+.auth-buttons a {
+    text-decoration: none;
+    padding: 0.5em 1em;
+    border-radius: 4px;
+    font-size: 1em;
+    margin-left: 0.5em;
+}
+
+.auth-buttons .login-btn {
+    background: #fff;
+    border: 1px solid #0073e6;
+    color: #0073e6;
+}
+
+.auth-buttons .register-btn {
+    background: #fff;
+    border: 1px solid #0073e6;
+    color: #0073e6;
+    margin-left: 5px;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+
+main {
+    padding: 2em 0;
+}
+
+#featured-companies {
+    background: #fff;
+    padding: 2em 0;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+
+#featured-companies h2 {
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+.filters {
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+.filter-btn {
+    background: #fff;
+    border: 1px solid #0073e6;
+    color: #0073e6;
+    padding: 0.5em 1em;
+    border-radius: 4px;
+    margin: 0 0.5em;
+    cursor: pointer;
+}
+
+.filter-btn.active {
+    background: #0073e6;
+    color: #fff;
+}
+
+.companies-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.company-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 23%;
+    box-sizing: border-box;
+    padding: 1em;
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+.company-card img {
+    max-width: 100px;
+    margin-bottom: 1em;
+}
+
+.company-card h3 {
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
+}
+
+.company-card p {
+    font-size: 0.9em;
+    margin-bottom: 1em;
+}
+
+.view-jobs {
+    text-decoration: none;
+    background: #0073e6;
+    color: #fff;
+    padding: 0.5em 1em;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.view-all {
+    text-align: center;
+    margin-top: 2em;
+}
+
+.view-all a {
+    text-decoration: none;
+    background: #0073e6;
+    color: #fff;
+    padding: 0.5em 2em;
+    border-radius: 4px;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    padding: 1em 0;
+    text-align: center;
+}
+
+footer p {
+    margin: 0.5em 0;
+}
+
+footer .social-icons img {
+    width: 30px;
+    height: 30px;
+    margin: 0 0.5em;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
